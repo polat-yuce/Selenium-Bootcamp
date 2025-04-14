@@ -9,7 +9,8 @@ public class BaseDriver {
 
     public static WebDriver driver;
 
-    public static void BaslangicIslemleri() {  // tearStart
+    // public static void BaslanicIslermleri() {  böyle yerine sadece static yazınca direk çalışır
+    static {  // tearStart
 
         driver = new ChromeDriver();
 
@@ -18,7 +19,7 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // 20 sn mühlet: elemanı bulma mühleti
     }
 
-    public static void BekleKapat(){  // tearDown
+    public static void BekleKapat() {  // tearDown
         MyFunc.Bekle(3);
         driver.quit();
     }
