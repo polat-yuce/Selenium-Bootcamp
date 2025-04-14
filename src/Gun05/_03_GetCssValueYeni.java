@@ -4,7 +4,7 @@ import Utlity.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _04_GetCssValueYeni extends BaseDriver {
+public class _03_GetCssValueYeni extends BaseDriver {
     public static void main(String[] args) {
         driver.get("https://www.snapdeal.com/");
 
