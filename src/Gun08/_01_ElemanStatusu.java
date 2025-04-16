@@ -28,5 +28,7 @@ public class _01_ElemanStatusu extends BaseDriver {
 
         Assert.assertTrue(cumartesi.isDisplayed()==true);
 
+        BekleKapat();
+
     }
 }
