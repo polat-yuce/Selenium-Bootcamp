@@ -8,6 +8,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class _07_Soru extends BaseDriver {
 
     /*
@@ -21,6 +23,11 @@ public class _07_Soru extends BaseDriver {
     @Test
     public void Test() {
         driver.get("https://google.com/");
+
+        //bulursan tıklat, bulamzsan geç
+        List<WebElement> acceptAll = driver.findElements(By.id("L2AGLb"));
+        if (acceptAll.size() > 0)
+            acceptAll.get(0).click();
 
         WebElement google = driver.findElement(By.id("APjFqb"));
         google.sendKeys("selenium" + Keys.ENTER);
